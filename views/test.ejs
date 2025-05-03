@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Jost", sans-serif;
+    }
+
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #EEE5DA;
+      flex-direction: column;
+      gap: 2vw;
+    }
+
+    #pop-up {
+      width: 30vw;
+      height: 15vw;
+      background-color: #262424;
+      border-radius: 50px;
+      padding: 20px 40px;
+      color: #EEE5DA;
+      display: flex;
+      flex-direction: column;
+      gap: 1vw;
+      transition: all 1.5s ease linear;
+      display: none;
+    }
+
+    h2.pop-heading {
+      text-align: center;
+      font-size: 1.8vw;
+      font-weight: 600;
+    }
+    h3.pop-sub-head{
+      text-align: center;
+      font-size: 1.3vw;
+      font-weight: 400;
+    }
+    button.pop-btn{
+      background-color: #E06E2E;
+      margin: 0 35%;
+      border-radius: 20px;
+      padding: 5px 20px;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+      color: #EEE5DA;
+      font-size: 1vw;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="sample" style="padding: 5px 20px; border-radius: 10px; cursor: pointer;">click me</button>
+  <div id="pop-up">
+    <h2 class="pop-heading">Your Form was Submitted Successfully!! 🎉</h2>
+    <h3 class="pop-sub-head">Check your mailbox for further response.</h3>
+    <button class="pop-btn">Done</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
+    integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+
+    let show = document.querySelector('#sample')
+    let hide = document.querySelector('.pop-btn')
+    let popUp = document.querySelector('#pop-up')
+
+    show.addEventListener('click', ()=>{
+      popUp.style.display = "flex"
+      gsap.from('#pop-up', {
+        opacity: 0,
+        duration: 1,
+        scale: .8,
+        ease: "elastic.out(1,0.3)",
+      })
+    })
+    hide.addEventListener('click', ()=>{
+      popUp.style.display = "none"
+    })
+
+
+  </script>
+</body>
+
+</html>
