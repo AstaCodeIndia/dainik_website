@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    position: fixed;
+    position: absolute;
     flex-direction: column;
 }
 
@@ -55,7 +55,7 @@
 
 @media screen and (max-width: 1000px) {
     #gallery{
-      height: 100vh;
+      height: 60vh;
     }
     #gallery-down{
         flex-direction: column;

@@ -1,4 +1,5 @@
-#pop-up-container {
+#pop-up-container,
+#pop-up-container2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,25 +8,34 @@
     gap: 2vw;
     width: 100%;
     height: 100vh;
-    position: absolute;
+    z-index: 200;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
     display: none;
 }
 
-#pop-up {
+#pop-up-container2 {
+    /* display: flex; */
+    padding: 6vw;
+}
+
+#pop-up,
+#pop-up2 {
     width: 30vw;
     height: 15vw;
     background-color: #262424;
-    border-radius: 50px;
+    border-radius: 2vw;
     padding: 20px 40px;
     color: #EEE5DA;
     display: flex;
     flex-direction: column;
     gap: 1vw;
     transition: all 1.5s ease linear;
-    /* display: none; */
+}
+
+#pop-up2 {
+    gap: 2vw;
 }
 
 h2.pop-heading {
@@ -182,6 +192,11 @@ textarea {
     margin: 0 auto;
     color: var(--secondary-color);
     background-color: var(--primary-color);
+}
+
+.input-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 #upper-texts {
@@ -410,6 +425,46 @@ textarea {
 /* Responsive Layout */
 
 @media screen and (max-width: 1000px) {
+    #pop-up-container2 {
+        padding: 6vw;
+    }
+
+    #pop-up,
+    #pop-up2 {
+        width: 60vw;
+        height: fit-content;
+        background-color: #262424;
+        border-radius: 4vw;
+        padding: 20px 40px;
+        color: #EEE5DA;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        transition: all 1.5s ease linear;
+    }
+
+    #pop-up2 {
+        gap: 2vw;
+    }
+
+    h2.pop-heading {
+        text-align: center;
+        font-size: 3vw;
+        font-weight: 600;
+        color: var(--primary-color);
+    }
+
+    h3.pop-sub-head {
+        text-align: center;
+        font-size: 2vw;
+        font-weight: 400;
+        color: var(--primary-color);
+    }
+
+    button.pop-btn {
+        font-size: 2vw;
+    }
+
     #contact-hero {
         height: fit-content;
         flex-direction: column;
@@ -505,6 +560,11 @@ textarea {
 
     p#info-para {
         font-size: 2.5vw;
+    }
+
+    .input-btn:hover {
+        color: var(--secondary-color);
+        background-color: var(--primary-color);
     }
 
     #achievements {
@@ -647,7 +707,30 @@ textarea {
     }
 }
 
+
+
 @media screen and (max-width: 500px) {
+
+    #pop-up,
+    #pop-up2 {
+        width: 80vw;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button.pop-btn {
+        font-size: 4vw;
+        padding: 1vw 15vw;
+    }
+
+    h2.pop-heading {
+        font-size: 5vw;
+    }
+
+    h3.pop-sub-head {
+        font-size: 3vw;
+    }
+
     #info-top p {
         font-size: 4vw;
         padding-right: 0;

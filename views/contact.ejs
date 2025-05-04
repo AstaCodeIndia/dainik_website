@@ -54,6 +54,13 @@
         <button class="pop-btn">Done</button>
       </div>
     </div>
+    <div id="pop-up-container2">
+      <div id="pop-up2">
+        <h2 class="pop-heading">Your Form was not sent!!! ☹️</h2>
+        <h3 class="pop-sub-head">Kindly try submitting the form again.</h3>
+        <button class="pop-btn">Done</button>
+      </div>
+    </div>
 
 
 
@@ -85,7 +92,7 @@
 
       </div>
       <div id="contact-form">
-        <form action="/contact" method="post">
+        <form id="contactForm">
           <div id="upper-texts">
             <h2 class="input-heading">Get in Touch!</h2>
             <h3 class="input-subheading">You can reach us anytime 👋</h3>
@@ -95,30 +102,31 @@
           <div class="inputs-holder">
             <div class="input">
               <label for="name">FULL NAME </label>
-              <input type="text" name="name" id="name">
+              <input type="text" name="name" id="name" required>
             </div>
 
             <div class="input">
               <label for="email">EMAIL</label>
-              <input type="email" name="email" id="email">
+              <input type="email" name="email" id="email" required>
             </div>
 
           </div>
           <div class="inputs-holder">
             <div class="input">
-              <label for="phone">PHONE NUMBER</label>
+              <label for="phone">PHONE NUMBER</label >
               <input type="tel" name="phone" id="phone" required>
             </div>
 
             <div class="input">
               <label for="location">Location</label>
-              <input type="text" name="location" id="location">
+              <input type="text" name="location" id="location"  required>
             </div>
           </div>
           <div class="inputs-holder">
             <div class="input">
               <label for="service">SERVICE</label>
-              <select name="service" id="service">
+              <select name="service" id="service" required>
+                <option value="" selected disabled hidden style="opacity: 60%;">Select your option</option>
                 <option value="Security Guard">Security Guard</option>
                 <option value="Gunman">Gunman</option>
                 <option value="Doorman">Doorman</option>
@@ -132,9 +140,9 @@
             </div>
           </div>
           <label for="textarea">DESCRIPTION</label>
-          <textarea name="textarea" id="textarea"></textarea>
+          <textarea name="textarea" id="textarea" required></textarea>
 
-          <input type="submit" value="Send" class="main-btn input-btn">
+          <input id="submitBtn" type="submit" value="Send" class="main-btn input-btn">
         </form>
       </div>
     </section>
@@ -590,6 +598,8 @@
     }
 
 </script>
+
+<script src="/javascripts/formsubmit.js"></script>
 
 
 </body>

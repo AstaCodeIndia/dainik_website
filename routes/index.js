@@ -21,7 +21,7 @@ router.get('/contact', function(req, res, next) {
 });
 
 // Form route
-router.post("/contact", sendMail);
+router.post("/contact", express.json(), sendMail);
 
 router.get('/blogs', function(req, res, next) {
   res.render('blogs', { title: '' });

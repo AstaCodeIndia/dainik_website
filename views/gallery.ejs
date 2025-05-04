@@ -2,99 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dainik Security</title>
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/gallery.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dainik Security</title>
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/gallery.css">
 </head>
 
 <body>
-    <header id="Desktop">
-        <div id="logo">
-          <a href="/">
-            <img src="/images/Logo.png" alt="Dainik Security">
-          </a>
-          
-        </div>
-        <nav>
-          <ul>
-            <li><a href="services">Services</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blogs">Blogs</a></li>
-            <li><a href="/gallery">Gallery</a></li>
-          </ul>
-        </nav>
-        <div id="contact">
-          <button><a href="/contact">Contact-us</a></button>
-        </div>
-      </header>
-      <header id="phone-nav">
-        <nav>
-          <ul id="upper-ul">
-            <a href="/"><img src="/images/Logo.png" alt="Logo"></a>
-            <button id="menu-btn">Menu</button>
-          </ul>
-          <ul id="links">
-            <li><a href="services">Services</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/blogs">Blogs</a></li>
-            <li><a href="/gallery">Gallery</a></li>
-            <li><a href="/contact">Contact-us</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header id="Desktop">
+    <div id="logo">
+      <a href="/">
+        <img src="/images/Logo.png" alt="Dainik Security">
+      </a>
 
-    <!-- Gallery -->
-    <section id="gallery">
-        <div id="gallery-up">
-            <div id="gallery-hero">
-            <h1><span>Gallery</span></h1>
-          </div>
-        </div>
-        <div id="gallery-down">
-             <div class="images">
-            <img src="/images/Image-4.jpeg" alt="Gallery-Image" />
-            <img src="/images/Training-2.jpg"   alt="Gallery-Image" />
-            <img src="/images/Image-2.jpeg" alt="Gallery-Image" />
-            <img src="/images/Image-3.png"  alt="Gallery-Image" />
-            <img src="/images/Image-4.jpeg" alt="Gallery-Image" />
-        </div>
-        <div class="images">
-           <img src="/images/Guards.jpg" alt="Gallery-Image">
-           <img src="/images/Training-4.jpg" alt="Gallery-Image">
-           <img src="/images/Training-6.jpg" alt="Gallery-Image">
-           <img src="/images/Training-2.jpg" alt="Gallery-Image"/>
-           <img src="/images/Image-5.jpeg" alt="Gallery-Image"/>
-        </div>
-        </div>
-        
-       
-    </section>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blogs">Blogs</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+      </ul>
+    </nav>
+    <div id="contact">
+      <button><a href="/contact">Contact-us</a></button>
+    </div>
+  </header>
+  <header id="phone-nav">
+    <nav>
+      <ul id="upper-ul">
+        <a href="/"><img src="/images/Logo.png" alt="Logo"></a>
+        <button id="menu-btn">Menu</button>
+      </ul>
+      <ul id="links">
+        <li><a href="services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blogs">Blogs</a></li>
+        <li><a href="/gallery">Gallery</a></li>
+        <li><a href="/contact">Contact-us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!--  Gsap is needed for Basic Effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Gallery -->
+  <section id="gallery">
+    <div id="gallery-up">
+      <div id="gallery-hero">
+        <h1><span>Gallery</span></h1>
+      </div>
+    </div>
+    <div id="gallery-down">
+      <div class="images">
+        <img src="/images/Image-4.jpeg" alt="Gallery-Image" />
+        <img src="/images/Training-2.jpg" alt="Gallery-Image" />
+        <img src="/images/Image-2.jpeg" alt="Gallery-Image" />
+        <img src="/images/Image-3.png" alt="Gallery-Image" />
+        <img src="/images/Image-4.jpeg" alt="Gallery-Image" />
+      </div>
+      <div class="images">
+        <img src="/images/Guards.jpg" alt="Gallery-Image">
+        <img src="/images/Training-4.jpg" alt="Gallery-Image">
+        <img src="/images/Training-6.jpg" alt="Gallery-Image">
+        <img src="/images/Training-2.jpg" alt="Gallery-Image" />
+        <img src="/images/Image-5.jpeg" alt="Gallery-Image" />
+      </div>
+    </div>
 
-    <!-- Scroll Trigger is needed for Scroll Effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    <!-- Three.js is needed for 3d Effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+  </section>
 
-    <!-- ControlKit is needed for Debug Panel -->
-    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
-    <script>
-        Shery.imageEffect(".images", {
-            style: 3,
-            debug: false,
-            scrollSnapping: true,
-            scrollSpeed: 6,
-            touchSpeed: 6,
-            damping: 7,
-        });
-        Shery.textAnimate("#gallery-hero h1 span", {
+  <!--  Gsap is needed for Basic Effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"
+  integrity="sha512-f6bQMg6nkSRw/xfHw5BCbISe/dJjXrVGfz9BSDwhZtiErHwk7ifbmBEtF9vFW8UNIQPhV2uEFVyI/UHob9r7Cw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"
+  integrity="sha512-AcqPGqrrAEtEwe+ADO5R8RbdFi7tuU7b/A2cJJH0Im0D18NRk5p5s4B3E5PMuO81KFw0ClN7J5SHVUJz7KOb0A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+<script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+<script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> 
+<script src="/javascripts/scroll.js"></script>
+  <script>
+    Shery.imageEffect(".images", {
+      style: 3,
+      debug: false,
+      scrollSnapping: true,
+      scrollSpeed: 6,
+      touchSpeed: 6,
+      damping: 7,
+    });
+    Shery.textAnimate("#gallery-hero h1 span", {
       style: 2,
       y: 50,
       delay: 0.1,
@@ -102,7 +103,7 @@
       ease: "cubic-bezier(0.23, 1, 0.320, 1)",
       multiplier: 0.1,
     });
-    </script>
+  </script>
 </body>
 
 </html>
