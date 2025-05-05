@@ -12,6 +12,7 @@
 body, html{
   width: 100%;
   height: 100%;
+  user-select: none;
 }
 
 :root{
@@ -175,7 +176,6 @@ footer{
 #up-foot-left h2 svg{
   width: 30px;
   height: 30px;
-
 }
 #up-foot-center{
   width: 40%;
@@ -209,6 +209,11 @@ footer{
   width: 5vw;
   height: 5vw;
   opacity: 80%;
+}
+
+#u-f-r-circle:hover, #u-f-r-circle a  {
+  transform: rotate(360deg);
+  transition: all .4s linear;
 }
 #footer-bottom h2{
   font-size: 1.4vw;
