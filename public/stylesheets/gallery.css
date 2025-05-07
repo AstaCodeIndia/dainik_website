@@ -21,13 +21,14 @@
 }
 #gallery{
     width: 100%;
-    height: 40vmax;
+    height: fit-content;
     background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     position: sticky;
     flex-direction: column;
+    gap: 3vw;
 }
 
 #gallery-down{

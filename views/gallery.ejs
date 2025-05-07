@@ -34,9 +34,8 @@
   <meta name="twitter:image" content="https://www.dainiksecurity.com/assets/gallery-og.jpg" />
 
   <!-- Favicon & Theme -->
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <meta name="theme-color" content="#1A237E" />
-
+  <link rel="shortcut icon" href="/images/Logo.ico" type="image/x-icon">
+  <meta name="theme-color" content="#000000" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
@@ -143,6 +142,23 @@
 <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> 
 <script src="/javascripts/scroll.js"></script>
   <script>
+    const mediaQuery = window.matchMedia('(max-width: 1000px)');
+    if (mediaQuery.matches) {
+      console.log('Screen width is less than or equal to 768px');
+    } else {
+
+      Shery.mouseFollower({
+        //Parameters are optional.
+        skew: true,
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+      });
+      Shery.makeMagnet("#contact button" /* Element to target.*/, {
+        //Parameters are optional.
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+      });
+    }
     Shery.imageEffect(".images", {
       style: 3,
       debug: false,

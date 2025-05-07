@@ -34,9 +34,12 @@ form.addEventListener("submit", async (e) => {
 
     if (result.success) {
       popup.style.display = 'flex'; // Show the popup
+      document.body.classList.add("no-scroll"); // Lock scroll
       form.reset(); // Optional: clear the form
+
     } else {
       popup2.style.display = 'flex'; // Show the popup
+      document.body.classList.add("no-scroll"); // Lock scroll
       form.reset(); // Optional: clear the form
     }
 
@@ -56,8 +59,12 @@ form.addEventListener("submit", async (e) => {
 
 doneBtn.addEventListener('click', () => {
   popup.style.display = 'none';
+  document.body.classList.remove("no-scroll"); // Unlock scroll
 });
 
 doneBtn2.addEventListener('click', () => {
   popup2.style.display = 'none';
+  document.body.classList.remove("no-scroll"); // Unlock scroll
 });
+
+

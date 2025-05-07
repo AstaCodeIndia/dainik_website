@@ -44,9 +44,9 @@
 .img {
     width: 35vmax;
     height: 20vmax;
-    background-color: coral;
+    /* background-color: coral; */
     border-radius: 30px;
-    background-color: red;
+    /* background-color: red; */
 }
 
 #who-left-down {
@@ -275,13 +275,13 @@
 }
 
 .team-card .team-img {
-    width: 20%;
+    width: 11vmax;
     border: 2px solid black;
     background-color: var(--primary-color);
     height: 11vmax;
     border-radius: 50%;
     overflow: hidden;
-    opacity: 1;
+    opacity: 0;
 }
 
 .team-card .team-img img {
@@ -292,6 +292,7 @@
     border-radius: 50%;
     overflow: hidden;
     /* opacity: 0; */
+    /* display: none; */
 }
 
 .team-card .team-role {
@@ -574,8 +575,6 @@
     }
 }
 
-
-
 @media screen and (max-width: 500px) {
     #about-hero {
         margin: 0;
@@ -664,6 +663,9 @@
         border-bottom-left-radius: 0;
     }
 
+    #team{
+        margin-bottom: 8vw;
+    }
     #team-cards {
         display: flex;
         flex-direction: column;
@@ -678,15 +680,18 @@
         align-items: center;
         justify-content: space-between;
         gap: 2rem;
+
     }
 
-    .team-card .team-name, .team-card .team-role {
+    .team-card .team-name,
+    .team-card .team-role {
         width: fit-content;
         padding: 0 3vw;
     }
+
     .team-card .team-img {
         width: 100px;
-            height: 100px;
+        height: 100px;
         z-index: 10;
     }
 
