@@ -378,7 +378,8 @@ textarea {
 
 #faqs {
     width: 100%;
-    height: 40vmax;
+    /* min0height: 40vmax; */
+    height: fit-content;
     display: flex;
 }
 
@@ -702,6 +703,7 @@ textarea {
 
     #faqs-right {
         width: 90%;
+        height: fit-content;
     }
 
     #faqs-right details {
